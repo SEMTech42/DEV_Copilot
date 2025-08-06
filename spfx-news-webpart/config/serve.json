@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://localhost:5432/workbench",
+      "customActions": {
+        "debug": {
+          "serve": {
+            "isEnabled": true
+          }
+        }
+      }
+    },
+    "topNews": {
+      "pageUrl": "https://localhost:5432/workbench",
+      "customActions": {
+        "debug": {
+          "serve": {
+            "isEnabled": true
+          }
+        }
+      }
+    }
+  }
+}
