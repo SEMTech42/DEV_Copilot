@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "49c8834e-43e0-4321-b2a6-35e4a44c5c15",
+  "alias": "TopNewsWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab", "SharePointFullPage"],
+  "supportsThemeVariants": true,
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+    "group": { "default": "Advanced" },
+    "title": { "default": "Top 5 Rated News" },
+    "description": { "default": "Displays the top 5 news items with 5-star ratings" },
+    "officeFabricIconFontName": "News",
+    "properties": {
+      "description": "Top 5 Rated News"
+    }
+  }]
+}
