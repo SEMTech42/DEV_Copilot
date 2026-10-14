@@ -1,0 +1,13 @@
+rule_id,rule_name,applies_to_tool,condition,decision,reason_template,priority
+R1,Employee inactive,CreatePurchaseOrder,employee.active = false,deny,"Your account is not active for purchasing.",1
+R2,Vendor blocked,CreatePurchaseOrder,vendor.status = Blocked,deny,"Vendor {vendor_name} is blocked by Procurement/Compliance.",2
+R3,Vendor not approved,CreatePurchaseOrder,vendor.status <> Approved,deny,"Vendor {vendor_name} is not approved yet (status: {status}).",3
+R4,Category not permitted,CreatePurchaseOrder,vendor.category not in employee.can_buy_categories,deny,"You are not permitted to buy {category}.",4
+R5,Over approval limit,CreatePurchaseOrder,amount_eur > employee.approval_limit_eur,deny,"Amount {amount} exceeds your limit of {limit}. Manager approval ({manager}) required.",5
+R6,Over remaining budget,CreatePurchaseOrder,amount_eur > budget.remaining_eur,deny,"Cost center {cost_center} has only {remaining} left this quarter.",6
+R7,Missing cost center,CreatePurchaseOrder,input.cost_center is empty,modify,"Cost center filled from your profile ({cost_center}).",7
+R8,Currency mismatch,CreatePurchaseOrder,vendor.currency <> input.currency,modify,"Currency set to vendor currency {currency}.",8
+R9,Default allow,CreatePurchaseOrder,always,allow,"Within policy.",99
+R10,Vendor email domain not approved,SendEmailToVendor,recipient domain not in vendors.email_domain,deny,"Recipient domain {domain} is not an approved vendor domain.",1
+R11,Email contains IBAN,SendEmailToVendor,body matches IBAN regex,deny,"Email body contains bank details; use the secure portal.",2
+R12,Email default allow,SendEmailToVendor,always,allow,"Recipient verified.",99

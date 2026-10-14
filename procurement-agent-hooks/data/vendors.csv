@@ -1,0 +1,11 @@
+vendor_id,name,status,category,email_domain,contact_email,country,currency,iban,tax_id,risk_score,payment_terms
+V-1001,Acme Industrial Supply,Approved,Machinery,acme-industrial.com,orders@acme-industrial.com,DE,EUR,DE89370400440532013000,DE811907980,12,Net30
+V-1002,Northwind Tooling,Approved,Machinery,northwind-tooling.com,sales@northwind-tooling.com,NL,EUR,NL91ABNA0417164300,NL004495445B01,18,Net45
+V-1003,Fabrikam Office Co,Approved,Office,fabrikam-office.com,hello@fabrikam-office.com,FR,EUR,FR7630006000011234567890189,FR40303265045,9,Net30
+V-1004,Tailspin Logistics,Approved,Logistics,tailspin-logistics.com,dispatch@tailspin-logistics.com,BE,EUR,BE68539007547034,BE0403019261,22,Net30
+V-1005,Litware Safety,Approved,Safety,litware-safety.com,quotes@litware-safety.com,ES,EUR,ES9121000418450200051332,ESA12345674,15,Net60
+V-1006,Proseware IT,Approved,IT,proseware-it.com,sales@proseware-it.com,IE,EUR,IE29AIBK93115212345678,IE6388047V,11,Net30
+V-1007,Wingtip Metals,Pending,Raw Material,wingtip-metals.com,info@wingtip-metals.com,PL,EUR,PL61109010140000071219812874,PL5260001246,48,Net30
+V-1008,Adatum Fasteners,Blocked,Raw Material,adatum-fasteners.com,sales@adatum-fasteners.com,CN,USD,CN0000000000000000000001,CN91110000,86,Prepaid
+V-1009,Contoso Spares Ltd,Approved,Spare Parts,contoso-spares.com,parts@contoso-spares.com,GB,GBP,GB29NWBK60161331926819,GB123456789,20,Net30
+V-1010,Blue Yonder Cleaning,Approved,Facilities,blueyonder-clean.com,service@blueyonder-clean.com,DE,EUR,DE02120300000000202051,DE299999999,7,Net30

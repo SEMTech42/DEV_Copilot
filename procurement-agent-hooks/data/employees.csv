@@ -1,0 +1,9 @@
+upn,display_name,department,cost_center,approval_limit_eur,manager_upn,can_buy_categories,active
+amelie.dupont@contoso.com,Amelie Dupont,Maintenance,CC-4100,10000,lars.meyer@contoso.com,Machinery;Spare Parts;Safety,true
+jonas.weber@contoso.com,Jonas Weber,Maintenance,CC-4100,2500,lars.meyer@contoso.com,Spare Parts;Safety,true
+sofia.rossi@contoso.com,Sofia Rossi,Finance,CC-2100,5000,ines.garcia@contoso.com,Office;IT,true
+tom.baker@contoso.com,Tom Baker,IT,CC-3200,15000,ines.garcia@contoso.com,IT;Office,true
+lars.meyer@contoso.com,Lars Meyer,Maintenance,CC-4100,50000,ceo@contoso.com,Machinery;Spare Parts;Safety;Raw Material;Logistics,true
+ines.garcia@contoso.com,Ines Garcia,Operations,CC-1000,100000,ceo@contoso.com,Machinery;Office;IT;Logistics;Facilities;Safety,true
+new.intern@contoso.com,Noah Intern,Maintenance,,500,jonas.weber@contoso.com,Office,true
+old.employee@contoso.com,Pat Leaver,Finance,CC-2100,5000,ines.garcia@contoso.com,Office,false
