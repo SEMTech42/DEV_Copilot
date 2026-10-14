@@ -35,16 +35,28 @@ for col, w in zip("ABCDE", (14, 14, 22, 10, 42)):
 # --- AuditLog ---------------------------------------------------------------
 al = wb.create_sheet("AuditLog")
 al.append(["timestamp", "user", "category", "amount", "has_receipt", "decision", "reason"])
-al.append(["2026-10-14T00:00:00Z", "init", "-", 0, "Non", "log", "Ligne d'initialisation (a supprimer apres le premier vrai test)"])
-table(al, "AuditLog", "A1:G2")
+for r in [
+    ["2026-10-12T09:14:00Z", "amelie.dupont@contoso.com", "Repas", 32, "Non", "allow", "Conforme"],
+    ["2026-10-12T10:02:00Z", "jonas.weber@contoso.com", "Repas", 85, "Non", "deny", "Plafond depasse : 40 EUR maximum pour Repas."],
+    ["2026-10-13T08:40:00Z", "sofia.rossi@contoso.com", "Alcool", 60, "Non", "deny", "La categorie Alcool n'est jamais remboursee."],
+    ["2026-10-13T15:21:00Z", "tom.baker@contoso.com", "Materiel", 700, "Oui", "deny", "Plafond depasse : 500 EUR maximum pour Materiel."],
+    ["2026-10-14T11:05:00Z", "tom.baker@contoso.com", "Materiel", 120, "Oui", "allow", "Conforme"],
+]:
+    al.append(r)
+table(al, "AuditLog", "A1:G6")
 for col, w in zip("ABCDEFG", (24, 30, 14, 10, 12, 10, 60)):
     al.column_dimensions[col].width = w
 
 # --- Expenses (alimentee par l'outil SubmitExpense) ------------------------
 ex = wb.create_sheet("Expenses")
 ex.append(["expense_id", "timestamp", "user", "category", "amount", "description", "status"])
-ex.append(["NDF-0000", "2026-10-14T00:00:00Z", "init", "-", 0, "Ligne d'initialisation (a supprimer)", "Init"])
-table(ex, "Expenses", "A1:G2")
+for r in [
+    ["NDF-1041", "2026-10-12T09:14:00Z", "amelie.dupont@contoso.com", "Repas", 32, "Resto client Acme", "Soumise"],
+    ["NDF-1042", "2026-10-13T12:30:00Z", "jonas.weber@contoso.com", "Taxi", 45, "Gare vers site client", "Soumise"],
+    ["NDF-1043", "2026-10-14T11:05:00Z", "tom.baker@contoso.com", "Materiel", 120, "Souris et clavier", "Soumise"],
+]:
+    ex.append(r)
+table(ex, "Expenses", "A1:G4")
 for col, w in zip("ABCDEFG", (12, 24, 30, 14, 10, 40, 12)):
     ex.column_dimensions[col].width = w
 
